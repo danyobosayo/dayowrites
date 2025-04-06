@@ -1,14 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Vollkorn } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const vollkorn = Vollkorn({
   subsets: ["latin"],
 });
 
@@ -24,10 +18,35 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className="flex flex-col justify-center">
+        <div className="flex flex-col text-center gap-3 py-8 w-full">
+          <h1>
+            <a href="/">Daniel Kim</a>
+          </h1>
+          <div className="text-center mx-auto flex gap-4 p-[10px] text-[#63725B]  text-2xl">
+            <h3 className="hover:text-[#899384]">
+              <a href="/scribbles">scribbles</a>
+            </h3>
+            <h3 className="hover:text-[#899384]">
+              <a href="/projects">projects</a>
+            </h3>
+            <h3 className="hover:text-[#899384]">
+              <a href="/myself">myself</a>
+            </h3>
+          </div>
+        </div>
+        <div className="w-fit max-w-[700px] mx-4 md:mx-auto flex flex-col px-6 pt-9 pb-12 border-2 border-[#63725B]">
+          {children}
+        </div>
+        <div className="py-6 flex justify-center align-middle">
+          <div className="flex gap-4 p-[10px] text-[#63725B]">
+            <p>contact</p>
+            <p>X</p>
+            <p>github</p>
+            <p>X</p>
+            <p>home</p>
+          </div>
+        </div>
       </body>
     </html>
   );
