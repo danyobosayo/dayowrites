@@ -16,24 +16,24 @@ function page() {
       </Header>
       <Block title="blog">
         <p>
-          The blog portion comprises of thoughts or connections that I've made
-          in the past. I never planned on sharing my creative writing or
-          thoughts, but then I decided, “What's the harm in?”.
+          The blog portion comprises of thoughts or connections that I&apos;ve
+          made in the past. I never planned on sharing my creative writing or
+          thoughts, but then I decided, &quot;What&apos;s the harm in?&quot;.
         </p>
       </Block>
       <Block title="notes">
         <p>
-          All of the notes that I've taken during my time at university can be
-          found here. It's a combination of digital notes from my iPad, and
-          markdown notes from Obsidian.
+          All of the notes that I&apos;ve taken during my time at university can
+          be found here. It&apos;s a combination of digital notes from my iPad,
+          and markdown notes from Obsidian.
         </p>
       </Block>
       <Block title="sermons">
         <p>
           I started taking digital notes during service about a year ago. It
-          started as a means of staying awake, but it's turned into a reliable
-          means of connecting adjacent ideas. I hope to continue building this
-          library so that I can rely on it during hard times.
+          started as a means of staying awake, but it&apos;s turned into a
+          reliable means of connecting adjacent ideas. I hope to continue
+          building this library so that I can rely on it during hard times.
         </p>
       </Block>
     </div>
