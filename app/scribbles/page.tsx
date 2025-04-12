@@ -7,16 +7,18 @@ function page() {
     <div className="gap-4 flex flex-col">
       <Header title="scribbles">
         <p>
-          A collection of my written works found on a single portal:
-          dayowrites.com.
+          A collection of my written works found on this{" "}
+          <a href="blog.dayowrites.com/" className="hyperlink" target="_blank">
+            portal
+          </a>
+          .
         </p>
       </Header>
       <Block title="blog">
         <p>
-          Here is my blog and it comprises of thoughts or connections that I've
-          made in the past. Initially, my intention for this project was to
-          create a place to store my ideas, but then I thought, “What's the harm
-          in sharing it with the World?”.
+          The blog portion comprises of thoughts or connections that I've made
+          in the past. I never planned on sharing my creative writing or
+          thoughts, but then I decided, “What's the harm in?”.
         </p>
       </Block>
       <Block title="notes">
@@ -30,7 +32,8 @@ function page() {
         <p>
           I started taking digital notes during service about a year ago. It
           started as a means of staying awake, but it's turned into a reliable
-          means of making connections.
+          means of connecting adjacent ideas. I hope to continue building this
+          library so that I can rely on it during hard times.
         </p>
       </Block>
     </div>

@@ -6,10 +6,21 @@
   --font-sans: var(--font-vollkorn-sans);
 }
 
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-vollkorn-sans);
+  --color-hyperlink: rgb(137, 147, 132);
+  --color-hover: #7D9173;
+  --color-salmon: #E3655B;
+  --color-darktext: #595958;
+}
+.hyperlink {
+  color: #7D9173;
+  text-decoration:underline;
+}
+.hyperlink:hover{
+  color:#595958;
 }
 
 body {

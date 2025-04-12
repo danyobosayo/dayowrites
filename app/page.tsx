@@ -4,50 +4,52 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-4">
       <div>
-        <p>Hello hi and welcome!</p>
+        <div className="flex justify-center pt-4 pb-8">
+          <Image
+            src="/assets/selfie.jpeg"
+            height={4032}
+            width={3024}
+            alt="selfie of Daniel Kim"
+            className="border-hover border-2 w-[400px]"
+          ></Image>
+        </div>
+        <p>Hello and welcome!</p>
         <p>
-          My name is Daniel Kim: and I'm <i>not</i> just another person
+          My name is Daniel Kim: and I&apos;m currently a senior at The
+          University of Texas at Dallas studying computer science.
         </p>
       </div>
       <div>
         <p>To list a few of the qualites I possess:</p>
-        <p>
-          - In a desperation to make perfect use of my time, I end up wasting a
-          majority of it.
-        </p>
-        <p>- I make promises to myself that I often end up breaking.</p>
-        <p>
-          - I start a bunch of hobbies, but I don't necessarily excel at any of
-          them.
-        </p>
-        <p>- And I often doubt myself and in my accomplishments.</p>
+        <li>
+          In an effort to make perfect use of my time, I end up wasting more of
+          it.
+        </li>
+        <li>I make promises to myself that I often end up breaking.</li>
+        <li>I have a bunch of hobbies, but don&apos;t excel at any of them.</li>
+        <li>And I often doubt myself and my accomplishments.</li>
       </div>
       <div>
-        <p>But despite all of this, one thing I can stand firm in is this:</p>
+        <p>But despite all of this, I can still thrive for one sole reason:</p>
         <p>
-          I am a child of God, eternally grateful for the salvation offered
-          through Jesus Christ.
+          His name is Jesus Christ, and I would love to share about how
+          he&apos;s changed my life.
         </p>
       </div>
+      <hr className="border border-hover w-full"></hr>
       <div>
         <p>
-          So I ask of you to take the qualms of life with a grain of salt.
-          Because in the end, you are not just another person, but so much more
-          than that-- you are uniquely made, loved, and cherished by our divine
-          creator.
-        </p>
-      </div>
-      <hr className="border border-[#63725B] w-full"></hr>
-      <div>
-        <p>
-          Feel free to explore my work, or reach out if you’d like to chat about
-          life, faith, or the journeys we’re all on at sungsu.kim04@gmail.
+          Feel free to explore this website. Or better yet,{" "}
+          <a className=" hyperlink" href="/contact">
+            reach out
+          </a>{" "}
+          if you&apos;d like to chat about life, faith, or anything in between.
         </p>
       </div>
       <div>
         <p>This is my resume.</p>
-        <p>Here's some of my University notes.</p>
-        <p>And this blog is a small passion project of mine.</p>
+        <p>And this is where I thank you for making it to the end. </p>
+        <p className="font-bold">Ave atque vale</p>
       </div>
     </div>
   );
