@@ -7,8 +7,8 @@ function page() {
     <div className="gap-4 flex flex-col">
       <Header title="contact">
         Below is a list of places to reach me. You could also try searching up
-        "Daniel Kim" on google and buying a lottery ticket while you&apos;re at
-        it.
+        &quot;Daniel Kim&quot; on google and buying a lottery ticket while
+        you&apos;re at it.
       </Header>
       <Block title="email">
         <p>
