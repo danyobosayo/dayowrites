@@ -115,9 +115,6 @@ function page() {
           Gödel by <i>Escher Bach</i> (tbd)
         </p>
       </Block>
-      <Block title="workflow">
-        <p></p>
-      </Block>
     </div>
   );
 }

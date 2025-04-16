@@ -18,7 +18,7 @@ function page() {
         <p>
           The blog portion comprises of thoughts or connections that I&apos;ve
           made in the past. I never planned on sharing my creative writing or
-          thoughts, but then I decided, &quot;What&apos;s the harm in?&quot;.
+          thoughts, but then I decided, &quot;What&apos;s the harm in it?&quot;.
         </p>
       </Block>
       <Block title="notes">

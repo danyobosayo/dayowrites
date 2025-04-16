@@ -15,7 +15,7 @@ export default function Home() {
         </div>
         <p>Hello and welcome!</p>
         <p>
-          My name is Daniel Kim: and I&apos;m currently a senior at The
+          My name is Daniel Kim: and I&apos;m currently a junior at The
           University of Texas at Dallas studying computer science.
         </p>
       </div>
@@ -47,7 +47,13 @@ export default function Home() {
         </p>
       </div>
       <div>
-        <p>This is my resume.</p>
+        <p>
+          Here's my{" "}
+          <a className="hyperlink" href="" target="_blank">
+            resume
+          </a>
+          .
+        </p>
         <p>And this is where I thank you for making it to the end. </p>
         <p className="font-bold">Ave atque vale</p>
       </div>
