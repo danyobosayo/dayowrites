@@ -48,7 +48,7 @@ export default function Home() {
       </div>
       <div>
         <p>
-          Here's my{" "}
+          Here&apos;s my{" "}
           <a className="hyperlink" href="" target="_blank">
             resume
           </a>
