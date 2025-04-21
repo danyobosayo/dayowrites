@@ -9,7 +9,7 @@ function page() {
         <p>
           A collection of my written works found on this{" "}
           <a
-            href="scribbles.danielsungsu.kim/"
+            href="https://scribbles.danielsungsu.kim/"
             className="hyperlink"
             target="_blank"
           >
