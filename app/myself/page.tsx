@@ -38,19 +38,19 @@ function page() {
             and some Poetry as well. What I began to recognize was how
             incredible this roughly three thousand year old piece of literature
             was. Nothing had ever brought me so much peace and applicable advice
-            for every qualm or burden. I slowly grew closer to God and began to
-            feel the Holy Spirit dwell within me. It changed my mindset, how I
-            carried myself, how I treated others, and the most incredible part
-            of all, others too observed that change in me. And so I used it as
-            an opportunity to share the Good News of Jesus Christ and how God
-            the Father sent him to suffer a terrible death, so that he could
-            overcome it and redeem all of us from eternal damnation.
+            for every obstacle or burden. I slowly grew closer to God and began
+            to feel the Holy Spirit dwell within me. It changed my mindset, how
+            I carried myself, and how I treated others. I was noticeably slower
+            to anger, more empathetic, and disciplined. And so today I feel
+            encouraged to use this revival as an opportunity to share the Good
+            News of Jesus Christ. About how God the Father sent him to suffer a
+            terrible excruciating death, so that he could overcome it and redeem
+            all of us from eternal damnation.
           </p>
           <p>
             To describe myself today: I still make mistakes and struggle with
-            insecurities. However, I sleep every night with contentment knowing
-            that I have a faithful and loving God standing beside me everywhere
-            I go.
+            insecurities. However, I can go to bed joyfully, in knowing that I
+            have a faithful and loving God standing beside me everywhere I go.
           </p>
           <p>
             So I ask of you to take the qualms of life with a grain of salt.
@@ -78,12 +78,12 @@ function page() {
           for any fellow runners.
         </p>
         <p>
-          I enjoy both tennis and pickleball, but I definitely prefer the older
-          of the two.
+          I enjoy both tennis and pickleball, but I play pickleball much more
+          often.
         </p>
         <p>
-          Since I was seven, my dad forced me to play golf, but these days I
-          actually enjoy it.
+          Since I was seven, my dad forced me to play golf, but these days
+          I&apos;ve come to enjoy it.
         </p>
         <p>
           Picked up the bass guitar for a garage band with my friends.
@@ -102,7 +102,7 @@ function page() {
       </Block>
       <Block title="reading list 2025">
         <p>
-          East of Eden by <i>John Steinback</i> (p.g. 184) {"<--"} currently
+          East of Eden by <i>John Steinback</i> (p.g. 184) {"<-"} currently
           reading
         </p>
         <p>

@@ -8,7 +8,11 @@ function page() {
       <Header title="scribbles">
         <p>
           A collection of my written works found on this{" "}
-          <a href="blog.dayowrites.com/" className="hyperlink" target="_blank">
+          <a
+            href="scribbles.danielsungsu.kim/"
+            className="hyperlink"
+            target="_blank"
+          >
             portal
           </a>
           .

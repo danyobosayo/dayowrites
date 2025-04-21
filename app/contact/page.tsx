@@ -13,12 +13,11 @@ function page() {
       <Block title="email">
         <p>
           By far the most reliable way to reach me is at my email,
-          sungsu.kim04@gmail.com. You can expect a response within 7 jupiter
-          days.
+          sungsu.kim04@gmail.com. You can expect a response within 7 days on
+          Jupiter.
         </p>
       </Block>
       <Block title="socials">
-        <li>discord: danyobosayo</li>
         <li>
           <a
             className="hyperlink"
