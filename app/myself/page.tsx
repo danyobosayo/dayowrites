@@ -63,9 +63,7 @@ function page() {
       </Block>
 
       <Block title="how i pass the time">
-        <p>
-          My current favorite hobby is bouldering: currently a V3-V4 climber.
-        </p>
+        <p>My current favorite hobby is bouldering. </p>
         <p>
           Here&apos;s my{" "}
           <a
@@ -78,12 +76,12 @@ function page() {
           for any fellow runners.
         </p>
         <p>
-          I enjoy both tennis and pickleball, but I play pickleball much more
-          often.
+          I enjoy both tennis and pickleball, but I&apos;m not gonna lie:
+          pickleball clears.
         </p>
         <p>
-          Since I was seven, my dad forced me to play golf, but these days
-          I&apos;ve come to enjoy it.
+          Since I was seven, my dad has tried (and failed) at making me play
+          golf, but these days I&apos;ve come to enjoy it.
         </p>
         <p>
           Picked up the bass guitar for a garage band with my friends.
@@ -102,7 +100,7 @@ function page() {
       </Block>
       <Block title="reading list 2025">
         <p>
-          East of Eden by <i>John Steinback</i> (p.g. 184) {"<-"} currently
+          East of Eden by <i>John Steinback</i> (p.g. 214) {"<-"} currently
           reading
         </p>
         <p>

@@ -15,7 +15,7 @@ export default function Home() {
         </div>
         <p>Hello and welcome!</p>
         <p>
-          My name is Daniel Kim: and I&apos;m currently a junior at The
+          My name is Daniel Kim and I&apos;m currently a senior at The
           University of Texas at Dallas studying computer science.
         </p>
       </div>
