@@ -81,9 +81,9 @@ function page() {
             className="hyperlink"
             target="_blank"
           >
-            HackUTD educational resource platform
-          </a>{" "}
-          (powered by docusaurus).
+            HackUTD Notion Website
+          </a>
+          .
         </p>
       </Block>
       <Block title="ontrack - my personal time tracking ai tool">
