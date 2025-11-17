@@ -63,7 +63,11 @@ function page() {
       </Block>
 
       <Block title="how i pass the time">
-        <p>My current favorite hobby is bouldering. </p>
+        <p>
+          In the past year, I went from trying out 10 different hobbies, to
+          practicing none of them consistently. My current favorites in no
+          particular order are: bouldering, running, tidying, and journaling.
+        </p>
         <p>
           Here&apos;s my{" "}
           <a
@@ -75,42 +79,24 @@ function page() {
           </a>{" "}
           for any fellow runners.
         </p>
-        <p>
-          I enjoy both tennis and pickleball, but I&apos;m not gonna lie:
-          pickleball clears.
-        </p>
-        <p>
-          Since I was seven, my dad has tried (and failed) at making me play
-          golf, but these days I&apos;ve come to enjoy it.
-        </p>
-        <p>
-          Picked up the bass guitar for a garage band with my friends.
-          We&apos;ve covered Sparks by Coldplay and Mr. Loverman by Ricky
-          Montgomery.
-        </p>
-        <p>
-          I&apos;m currently the Experience Team lead and my role entails making
-          sure that my team stays on track and continuously improving the hacker
-          experience for{" "}
-          <a href="https://hackutd.co/" target="_blank" className="hyperlink">
-            HackUTD
-          </a>
-          .
-        </p>
       </Block>
       <Block title="reading list 2025">
         <p>
-          East of Eden by <i>John Steinback</i> (p.g. 214) {"<-"} currently
+          East of Eden by <i>John Steinback</i> (p.g. 241) {"<-"} currently
           reading
+        </p>
+        <p>
+          In The Miso Soup by <i>Ryu Murakami</i> (fin) 9.2/10
         </p>
         <p>
           School of Life by <i>Alain de Botton</i> (p.g. 59)
         </p>
         <p>
-          Why We Sleep by <i>Matthew Walker</i> (p.g. 124)
+          Why We Sleep by <i>Matthew Walker</i> (fin) 5.5/10
         </p>
         <p>
-          Gödel by <i>Escher Bach</i> (tbd)
+          Gödel, Escher, Bach: an Eternal Golden Braid by{" "}
+          <i>Douglas Hofstadter</i> (p.g. 35)
         </p>
       </Block>
     </div>

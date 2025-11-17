@@ -1,7 +1,17 @@
 @import "tailwindcss";
 
+/* Goal is to hide the scroll bar. */
+@utility scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 :root {
-  --background: #FBF8F4;
+  --background: #fbf8f4;
   --foreground: #595958;
   --font-sans: var(--font-vollkorn-sans);
 }
@@ -11,31 +21,34 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-vollkorn-sans);
   --color-hyperlink: rgb(137, 147, 132);
-  --color-hover: #7D9173;
-  --color-salmon: #E3655B;
+  --color-hover: #7d9173;
+  --color-salmon: #e3655b;
   --color-darktext: #595958;
 }
 .hyperlink {
-  color: #7D9173;
-  text-decoration:underline;
+  color: #7d9173;
+  text-decoration: underline;
 }
-.hyperlink:hover{
-  color:#595958;
+.hyperlink:hover {
+  color: #595958;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Vollkorn', serif;
-  font-size: medium
+  font-family: "Vollkorn", serif;
+  font-size: medium;
 }
 
 h1 {
   @apply text-5xl;
 }
-h2 { /* This is h1.5 in the figma */
+h2 {
+  /* This is h1.5 in the figma */
   @apply text-4xl;
 }
-h3 { /* This is h2 in the figma */
+h3 {
+  /* This is h2 in the figma */
   @apply text-2xl;
 }
+

@@ -4,7 +4,7 @@ import Block from "../components/block";
 
 function page() {
   return (
-    <div className="gap-4 flex flex-col">
+    <div className="gap-4 overflow-scroll scrollbar-hide flex flex-col">
       <Header title="projects">
         <p>
           Personal projects and freelance work that I&apos;ve done over the past

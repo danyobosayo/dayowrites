@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex overflow-scroll scrollbar-hide flex-col gap-4">
       <div>
         <div className="flex justify-center pt-4 pb-8">
           <Image
