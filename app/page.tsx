@@ -7,8 +7,8 @@ export default function Home() {
         <div className="flex justify-center pt-4 pb-8">
           <Image
             src="/assets/child.jpeg"
-            height={3024}
-            width={4032}
+            height={4032}
+            width={3024}
             alt="Daniel Kim as a child"
             className="border-hover border-2 w-[400px]"
           ></Image>

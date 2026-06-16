@@ -21,12 +21,18 @@ export default function RootLayout({
           <h1>
             <Link href="/">Daniel Kim</Link>
           </h1>
-          <div className="text-center mx-auto flex gap-4 p-[10px] text-hover text-2xl">
+          <div className="text-center mx-auto flex flex-wrap justify-center gap-4 p-[10px] text-hover text-2xl">
             <h3 className="hover:text-darktext">
               <Link href="/scribbles">scribbles</Link>
             </h3>
             <h3 className="hover:text-darktext">
               <Link href="/projects">projects</Link>
+            </h3>
+            <h3 className="hover:text-darktext">
+              <Link href="/photography">photography</Link>
+            </h3>
+            <h3 className="hover:text-darktext">
+              <Link href="/food">food</Link>
             </h3>
             <h3 className="hover:text-darktext">
               <Link href="/myself">myself</Link>
