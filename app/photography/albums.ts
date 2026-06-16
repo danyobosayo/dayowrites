@@ -7,8 +7,10 @@ export type Album = {
   description: string;
 };
 
-// Albums shown on the photography page. To add photos, drop image files into
-// public/assets/photography/<slug>/ — they are picked up automatically.
+// Albums shown on the photography page. To add photos, run the resize script
+// (`npm run photos -- --src <folder> --album <slug>`) which writes optimized
+// WebP copies into public/assets/photography/<slug>/. Any image there is picked
+// up automatically.
 export const albums: Album[] = [
   {
     slug: "japan-korea-2026",
