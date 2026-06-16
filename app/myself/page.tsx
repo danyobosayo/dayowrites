@@ -80,23 +80,31 @@ function page() {
           for any fellow runners.
         </p>
       </Block>
-      <Block title="reading list 2025">
+      <Block title="reading list 2026">
         <p>
-          East of Eden by <i>John Steinback</i> (p.g. 241) {"<-"} currently
+          I Who Have Never Known Men by <i>Jacqueline Harpman</i> (fin) 8.4/10
+        </p>
+        <p>
+          The Almanack of Naval Ravikant by <i>Eric Jorgenson</i> (fin) 9/10
+        </p>
+        <p>
+          Norwegian Wood by <i>Haruki Murakami</i> (fin) 7/10
+        </p>
+        <p>
+          Twelve Pillars by <i>Jim Rohn & Chris Widener</i> (fin) 6/10
+        </p>
+        <p>
+          East of Eden by <i>John Steinbeck</i> (p.g. 301) {"<-"} currently
           reading
         </p>
         <p>
-          In The Miso Soup by <i>Ryu Murakami</i> (fin) 9.2/10
+          Crucial Conversations by <i>Kerry Patterson et al.</i> (p.g. 152)
         </p>
         <p>
-          School of Life by <i>Alain de Botton</i> (p.g. 59)
+          How to Day Trade for a Living by <i>Andrew Aziz</i> (p.g. 96)
         </p>
         <p>
-          Why We Sleep by <i>Matthew Walker</i> (fin) 5.5/10
-        </p>
-        <p>
-          Gödel, Escher, Bach: an Eternal Golden Braid by{" "}
-          <i>Douglas Hofstadter</i> (p.g. 35)
+          The Intelligent Investor (3rd ed.) by <i>Benjamin Graham</i> (p.g. 45)
         </p>
       </Block>
     </div>

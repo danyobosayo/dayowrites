@@ -99,12 +99,37 @@ function page() {
           the flow state catalysts that lead to deep brain-rot sessions.
         </p>
       </Block>
-      <Block title="favorite restaurant macro tracker">
+      <Block title="loadout - fast food macro builder">
         <p>
           I found myself frequenting fast food restaurants, namely Chipotle and
           Cava, for the past two years of my life. And as someone who focuses on
           nutrition, I wanted to create a convenient and efficient way of
           calculating exactly what I&apos;m putting in my body.
+        </p>
+        <p>
+          So I built <strong>Loadout</strong>, a free, ad-free, native iOS app
+          (SwiftUI) that lets you assemble a custom meal at fast-casual spots
+          like Chipotle, CAVA, Panda Express, and Sweetgreen, watch the macros
+          update live as you build it, and export the totals straight into
+          MacroFactor with a single tap.
+        </p>
+      </Block>
+      <Block title="pulse - urge awareness tracker">
+        <p>
+          A native iOS app I built for myself to help me overcome a porn
+          addiction. Instead of obsessing over days of abstinence, Pulse tracks
+          the moments I <i>notice and resist</i> a compulsion, logging the mood,
+          context, and intensity behind each one so I can spot my patterns and
+          build real awareness. I shipped the first version to the App Store.
+        </p>
+      </Block>
+      <Block title="word assassins">
+        <p>
+          My current opus. A social deduction party game I&apos;ve been building
+          for the past few months and am almost ready to launch into public
+          beta. It&apos;s a React Native (Expo) app that coordinates and referees
+          an in-person, word-based assassin game, staying out of the way once a
+          round is live so players can focus on outsmarting each other.
         </p>
       </Block>
       <Block title="dye drive">
