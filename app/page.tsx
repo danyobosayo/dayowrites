@@ -6,10 +6,10 @@ export default function Home() {
       <div>
         <div className="flex justify-center pt-4 pb-8">
           <Image
-            src="/assets/selfie.jpeg"
-            height={4032}
-            width={3024}
-            alt="selfie of Daniel Kim"
+            src="/assets/child.jpeg"
+            height={3024}
+            width={4032}
+            alt="Daniel Kim as a child"
             className="border-hover border-2 w-[400px]"
           ></Image>
         </div>
@@ -23,7 +23,7 @@ export default function Home() {
       <div>
         <p>To list a few of the qualites I possess:</p>
         <li>
-          I obsess over my image and care WAY too much about what others think
+          I obsess over my image and care way too much about what others think
           of me.
         </li>
         <li>
