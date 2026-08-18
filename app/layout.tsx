@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Waves } from "lucide-react";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import Link from "next/link";
 
@@ -23,7 +24,9 @@ export default function RootLayout({
           </h1>
           <div className="text-center mx-auto flex flex-wrap justify-center gap-4 p-[10px] text-hover text-2xl">
             <h3 className="hover:text-darktext">
-              <Link href="/scribbles">scribbles</Link>
+              <a target="_blank" href="https://scribbles.danielsungsu.kim/">
+                writing
+              </a>
             </h3>
             <h3 className="hover:text-darktext">
               <Link href="/projects">projects</Link>
@@ -59,6 +62,7 @@ export default function RootLayout({
             </p>
           </div>
         </div>
+        <Analytics />
       </body>
     </html>
   );
