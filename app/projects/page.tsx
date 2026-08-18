@@ -13,12 +13,12 @@ function page() {
       </Header>
       <Block title="dire creatives">
         <p>
-          During the 2024 winter season, an old high school friend approached me
-          and my other best friend in hopes of doing collaborative freelance
-          work. Apparently he had been doing videography for small-mid sized
-          companies in his local area and wanted to expand into providing a
-          complete digital package. Since then, we&apos;ve designed two
-          professional websites that can be found here:
+          During the 2024 winter season, two of my best friends and I teamed up
+          to do freelance work together. One of them had been doing videography
+          for small-mid sized companies in his local area and wanted to expand
+          into providing a complete digital package, so the three of us made it
+          happen. Since then, we&apos;ve designed two professional websites that
+          can be found here:
         </p>
         <ul>
           <p className="flex flex-col">
@@ -86,19 +86,6 @@ function page() {
           .
         </p>
       </Block>
-      <Block title="ontrack - my personal time tracking ai tool">
-        <p>
-          I recently became obsessed with the idea of flow state and catalysts.
-          Everybody knows that their best work is done whilst in the flow state,
-          but how does one reliably enter it? The easiest answer is by simply
-          starting. But this brought about another issue, the brain-rot flow
-          state. I rarely catch myself in deep brain-rot sessions, and these
-          sessions range from 30 minutes to several hours, which costs me time
-          and sanity. My solution for this is to catch what exactly leads up to
-          these moments, so that I can better avoid them and be more mindful of
-          the flow state catalysts that lead to deep brain-rot sessions.
-        </p>
-      </Block>
       <Block title="loadout - fast food macro builder">
         <p>
           I found myself frequenting fast food restaurants, namely Chipotle and
@@ -114,22 +101,65 @@ function page() {
           MacroFactor with a single tap.
         </p>
       </Block>
-      <Block title="pulse - urge awareness tracker">
+      <Block title="hearth - a private health dashboard">
         <p>
-          A native iOS app I built for myself to help me overcome a porn
-          addiction. Instead of obsessing over days of abstinence, Pulse tracks
-          the moments I <i>notice and resist</i> a compulsion, logging the mood,
-          context, and intensity behind each one so I can spot my patterns and
-          build real awareness. I shipped the first version to the App Store.
+          Hearth is an on-device dashboard for my Apple Health data, built
+          native in SwiftUI with a watch app and widgets. It reads HealthKit
+          and distills overnight HRV, resting heart rate, sleep, and a dozen
+          other biomarkers into readiness, sleep, and stress scores, each
+          measured against my own 60-day baseline instead of population
+          averages. A one-tap export drops analyst-ready CSVs straight into my
+          Obsidian vault. No accounts, no cloud; the data never leaves the
+          phone, which is exactly the point.
         </p>
       </Block>
-      <Block title="word assassins">
+      <Block title="pulse - urge awareness tracker">
         <p>
-          My current opus. A social deduction party game I&apos;ve been building
-          for the past few months and am almost ready to launch into public
-          beta. It&apos;s a React Native (Expo) app that coordinates and referees
-          an in-person, word-based assassin game, staying out of the way once a
-          round is live so players can focus on outsmarting each other.
+          Pulse was an app I needed before it was an app I built. While working
+          to overcome a porn addiction, I realized streak counters have the
+          problem backwards: they measure the absence of failure rather than
+          the presence of effort. Pulse tracks the moments I{" "}
+          <i>notice and resist</i> an urge, capturing the mood, context, and
+          intensity behind each one. Those entries slowly become a map of my
+          patterns, and the goal shifts from white-knuckling a streak to
+          actually understanding myself. The first version is{" "}
+          <a
+            href="https://apps.apple.com/us/app/pulse-urge-awareness-tracker/id6767706260"
+            className="hyperlink"
+            target="_blank"
+          >
+            live on the App Store
+          </a>
+          .
+        </p>
+      </Block>
+      <Block title="word assassins - coax">
+        <p>
+          My current opus, now on the App Store as{" "}
+          <a
+            href="https://apps.apple.com/us/app/word-assassins-coax/id6757906454"
+            className="hyperlink"
+            target="_blank"
+          >
+            Word Assassins - Coax
+          </a>
+          . It&apos;s the classic in-person assassin game with words as the
+          weapon: everyone receives a secret target and a trigger word, and
+          your job is to coax your target into saying theirs. The app handles
+          the bookkeeping, targets, eliminations, and inheritance, then gets
+          out of the way, because the real game unfolds at brunch tables, on
+          road trips, and in group chats. What started as a weekend referee
+          tool has grown into multiple game modes, forty-plus word packs,
+          AI-generated custom packs, and lobbies of up to a hundred players.
+          There&apos;s more at{" "}
+          <a
+            href="https://playcoax.com/"
+            className="hyperlink"
+            target="_blank"
+          >
+            playcoax.com
+          </a>
+          .
         </p>
       </Block>
       <Block title="dye drive">
