@@ -24,3 +24,5 @@ Two pieces of work:
 
 Component: a client `<Lightbox>` over the existing `Gallery`, with keyboard (Esc / arrows)
 and focus handling for accessibility.
+
+- Food page v2: the "trendy, dynamic, visionary" redesign (deferred; current page keeps the cottage-core theme). Also: fill in restaurant names/ratings on /food in dev mode (inline editor).
