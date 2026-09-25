@@ -100,6 +100,12 @@ test("database permissions, seed preservation, concurrent edits, bulk atomicity,
     "utf8",
   );
   await db.exec(migration);
+  await db.exec(
+    readFileSync(
+      new URL("../supabase/migrations/20260925215101_packing_conflict_response.sql", import.meta.url),
+      "utf8",
+    ),
+  );
   await db.exec(seed);
   const [first, second] = initialItems;
   const row = async (id: string) =>
@@ -218,7 +224,7 @@ test("database permissions, seed preservation, concurrent edits, bulk atomicity,
             TRIP_ID,
             selected,
           ]),
-          /List changed/,
+          { code: "PT409" },
         );
         assert.equal((await row(first.id)).version, 2);
         assert.equal((await row(first.id)).packed, false);
@@ -241,7 +247,7 @@ test("database permissions, seed preservation, concurrent edits, bulk atomicity,
               { id: first.id, version: 3 },
             ]),
           ]),
-          /List changed/,
+          { code: "PT409" },
         );
       },
     );

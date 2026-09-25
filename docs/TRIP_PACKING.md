@@ -32,12 +32,17 @@ to make retries idempotent. Deletion sets `deleted=true`, which produces a
 filterable UPDATE event and supports Undo. Failed optimistic writes restore the
 previous item locally before refetching.
 
+Bulk version conflicts use SQLSTATE `PT409`, which PostgREST maps directly to
+HTTP 409. Do not use `40001` for this application-level conflict: it denotes a
+retryable serialization failure and caused the hosted request to time out.
+
 ## Setup
 
 1. Apply the files in `supabase/migrations/` in order to the website's separate
    Supabase project. Do not use a Coax project. The second migration restricts
    public execution of the optional Supabase automatic-RLS helper; its event
-   trigger continues protecting newly created tables.
+   trigger continues protecting newly created tables. The third migration fixes
+   the bulk conflict response described above.
 2. Run `supabase/seed.sql` once. It uses `ON CONFLICT DO NOTHING`, so a repeat run
    preserves later edits and packed states. `npm run packing:seed` regenerates it
    from the source snapshot.
@@ -59,7 +64,7 @@ packing items stored in source control.
 
 The initial cloud import was checked on September 25, 2026 against the local SQL
 seed: 36 rows, five packed, with matching ordered-row checksum
-`87006dd4fa21668414d1c94c9b82ef2e` (excluding `updated_at`). Both migrations are
+`87006dd4fa21668414d1c94c9b82ef2e` (excluding `updated_at`). Applied migrations are
 recorded in `supabase_migrations.schema_migrations`. The cloud permission checks
 confirmed that `anon` and `authenticated` cannot read or change either table, while
 the server role can. The automatic-RLS event trigger still protects new tables

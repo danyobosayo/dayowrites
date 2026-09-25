@@ -87,7 +87,7 @@ export async function PATCH(request: Request) {
         p_items: items,
         p_packed: input.packed,
       });
-      if (error?.code === "40001")
+      if (error?.code === "PT409" || error?.code === "40001")
         throw new HttpError(
           409,
           "Someone changed this list. Review the latest items and try again.",

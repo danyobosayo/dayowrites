@@ -20,12 +20,13 @@ async function api(path = "", method = "GET", body?: unknown) {
     headers: body ? { "Content-Type": "application/json" } : undefined,
     body: body ? JSON.stringify(body) : undefined,
   });
-  const data = await response.json();
+  const data = await response.json().catch(() => null);
   if (!response.ok)
     throw new ApiError(
       response.status,
-      data.error || "Could not save. Try again.",
+      data?.error || "Could not save or load the list. Try again.",
     );
+  if (!data) throw new ApiError(502, "Could not load the list. Try again.");
   return data;
 }
 
