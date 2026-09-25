@@ -57,6 +57,14 @@ packing items stored in source control.
 
 ## Verification
 
+The initial cloud import was checked on September 25, 2026 against the local SQL
+seed: 36 rows, five packed, with matching ordered-row checksum
+`87006dd4fa21668414d1c94c9b82ef2e` (excluding `updated_at`). Both migrations are
+recorded in `supabase_migrations.schema_migrations`. The cloud permission checks
+confirmed that `anon` and `authenticated` cannot read or change either table, while
+the server role can. The automatic-RLS event trigger still protects new tables
+after public execution of its helper function is revoked.
+
 `npm test` runs session/input checks and the SQL migration against PGlite. It
 checks permissions, seed preservation, stale item writes, bulk atomicity,
 idempotent additions, and deletion/undo. `npm run build` checks the production
