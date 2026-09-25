@@ -295,7 +295,6 @@
 }
 .packing-collapse > span {
   font-size: 12px;
-  opacity: 0.92;
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
 }
@@ -304,7 +303,7 @@
   align-items: center;
   gap: 4px;
   justify-content: center;
-  background: #ffffff1c;
+  background: #0000000a;
   border: 1px solid #ffffff55;
   border-radius: 6px;
   min-height: 44px;
@@ -338,7 +337,7 @@
 .packing-check > span {
   width: 25px;
   height: 25px;
-  border: 1.5px solid #82929f;
+  border: 1.5px solid #7a8b99;
   border-radius: var(--radius-control);
   display: grid;
   place-items: center;
@@ -800,7 +799,7 @@
     background: #e9eff4;
   }
   .category-add:hover {
-    background: #ffffff30;
+    background: #00000018;
   }
   .packing-filters button:hover,
   .packing-category-footer button:hover {
