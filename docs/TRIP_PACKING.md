@@ -79,3 +79,15 @@ failed saves, and the actual hosted realtime connection.
 The Next.js 15 security update includes narrow overrides for its PostCSS
 dependency and ESLint's older brace-expansion dependency. Keep the overrides
 until the parent packages resolve to fixed versions; verify with `npm audit`.
+
+## Interaction design, September 2026
+
+The packing list is a shared instrument for five friends getting ready for Austin; it should feel calm and satisfying because each small action makes the group's progress clear. Preserve the final Canvas's content, category colors, and direct list structure. The visual register is a compact, practical notebook, with native scrolling, no imagery or sound, and no decorative intro.
+
+Before implementation, the live Chrome audit at 390px and desktop showed a clear layout with no horizontal overflow. Several status/category buttons were 42px tall, Add buttons were 40px, and Share was 43px. Selection, checking, and modal opening lacked a consistent motion language. Keyboard skip navigation and modal focus restoration need explicit treatment. This is a product craft audit, not an award submission; preliminary subjective scores are Design 6.5, Usability 6.8, Creativity 5.5, Content 8.0 (weighted 6.5). No Lighthouse, frame-rate, or Core Web Vitals scores are inferred from appearance.
+
+Art direction: retain the system font to avoid another font request, with a 16px item label, 13–14px quantity/meta text, 17px category headings and a fluid 25–34px title. Use 4/8/12/16/24px spacing, 8px controls and 12px surfaces, cool neutral backgrounds and dark ink. Category colors identify groups; green signifies packing progress and connection. Controls have at least 44px height, explicit focus, touch press and pointer-hover states. Keep the one-column phone layout and aligned quantity column on larger screens.
+
+Signature interaction, "check and settle": tapping a checkbox immediately changes its semantic state, draws the check over 180ms and advances the progress fill with a 360ms decelerating transform. The row settles into a quiet packed state; the Saving label distinguishes optimistic feedback from persistence. A failed write restores the previous state. The same feedback supports mouse, keyboard and touch, and remote edits use the same state transitions. Reduced motion presents the final check, count and fill immediately. Content is visible before interaction and there are no blocking animations or scroll effects.
+
+Supporting motion: a sliding status-filter selection, 180ms press/focus feedback, and a 280ms bottom-sheet or centered-dialog entrance. Category reopening uses one short grouped reveal. All movement uses one deceleration curve and transforms/opacity; no animation library or continuous decorative loop. The three highest-value improvements are coherent action feedback, larger/high-contrast controls, and predictable editing/focus. Expected subjective movement is roughly +0.6 Design, +0.4 Usability, +0.4 Creativity, for a 6.9 craft score; actual completion depends on browser verification, not this estimate.

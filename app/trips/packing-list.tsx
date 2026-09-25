@@ -11,9 +11,9 @@ import {
 import Link from "next/link";
 import {
   Check,
+  CalendarDays,
   ChevronDown,
   ChevronLeft,
-  LoaderCircle,
   MoreHorizontal,
   Plus,
   Search,
@@ -44,7 +44,15 @@ function Modal({
 }) {
   const ref = useRef<HTMLDialogElement>(null);
   useEffect(() => {
-    ref.current?.showModal();
+    const dialog = ref.current;
+    const trigger = document.activeElement;
+    dialog?.showModal();
+    return () => {
+      dialog?.close();
+      if (trigger instanceof HTMLElement && trigger.isConnected) {
+        trigger.focus({ preventScroll: true });
+      }
+    };
   }, []);
   return (
     <dialog
@@ -220,7 +228,7 @@ export default function PackingList() {
     !pending.has(editor.item.id);
 
   return (
-    <main className="packing-page">
+    <main className="packing-page" id="trip-content" tabIndex={-1}>
       <header className="packing-heading">
         <div className="packing-topline">
           <Link href="/trips">
@@ -237,13 +245,24 @@ export default function PackingList() {
           )}
         </div>
         <h1>{TRIP_TITLE}</h1>
-        <p className="packing-date">September 26–27, 2026</p>
+        <p className="packing-date">
+          <CalendarDays size={15} aria-hidden="true" />
+          September 26–27, 2026
+        </p>
       </header>
 
       {state === "loading" && (
-        <div className="packing-empty" role="status">
-          <LoaderCircle className="spin" size={24} />
-          <p>Opening the packing list…</p>
+        <div className="packing-loading" role="status">
+          <span className="sr-only">Opening the packing list…</span>
+          <div className="packing-skeleton" aria-hidden="true">
+            <div className="skeleton-summary" />
+            <div className="skeleton-track" />
+            <div className="skeleton-controls" />
+            <div className="skeleton-category" />
+            {[0, 1, 2, 3].map((row) => (
+              <div className="skeleton-row" key={row} />
+            ))}
+          </div>
         </div>
       )}
       {state === "locked" && (
@@ -290,13 +309,26 @@ export default function PackingList() {
               <strong>
                 {packedCount} <span>of {visible.length} packed</span>
               </strong>
-              <span>{visible.length - packedCount} to go</span>
+              <span className="packing-remaining">
+                {visible.length > 0 && packedCount === visible.length ? (
+                  <><Check size={15} aria-hidden="true" /> All packed</>
+                ) : (
+                  `${visible.length - packedCount} to go`
+                )}
+              </span>
             </div>
-            <progress
-              value={packedCount}
-              max={visible.length || 1}
+            <div
+              className="packing-progress-track"
+              role="progressbar"
+              aria-valuenow={packedCount}
+              aria-valuemin={0}
+              aria-valuemax={visible.length || 1}
               aria-label={`${progress}% packed`}
-            />
+            >
+              <span
+                style={{ transform: `scaleX(${visible.length ? packedCount / visible.length : 0})` }}
+              />
+            </div>
           </section>
           <div className="packing-toolbar">
             <div className="packing-controls">
@@ -304,6 +336,9 @@ export default function PackingList() {
                 className="packing-filters"
                 role="group"
                 aria-label="Filter by packing status"
+                style={{
+                  "--selected": filter === "all" ? 0 : filter === "unpacked" ? 1 : 2,
+                } as CSSProperties}
               >
                 {(
                   [
@@ -321,18 +356,31 @@ export default function PackingList() {
                   </button>
                 ))}
               </div>
-              <label className="packing-search">
-                <Search size={18} />
-                <span className="sr-only">
+              <div className="packing-search">
+                <Search size={18} aria-hidden="true" />
+                <label className="sr-only" htmlFor="packing-search">
                   Search items, quantities, or units
-                </span>
+                </label>
                 <input
+                  id="packing-search"
                   type="search"
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
                   placeholder="Search the list"
                 />
-              </label>
+                {query && (
+                  <button
+                    className="packing-search-clear"
+                    aria-label="Clear search"
+                    onClick={() => {
+                      setQuery("");
+                      document.getElementById("packing-search")?.focus();
+                    }}
+                  >
+                    <X size={17} aria-hidden="true" />
+                  </button>
+                )}
+              </div>
             </div>
             <nav className="packing-categories" aria-label="Categories">
               <button
@@ -353,7 +401,12 @@ export default function PackingList() {
               ))}
             </nav>
           </div>
-          <div className="packing-connection" role="status">
+          <div
+            className="packing-connection"
+            role="status"
+            data-state={!list.online ? "offline" : pending.size ? "saving" : list.connected ? "live" : "connecting"}
+          >
+            {list.online && <span className="packing-connection-dot" aria-hidden="true" />}
             {!list.online ? (
               <>
                 <WifiOff size={14} /> Offline. Reconnect to make changes.
@@ -428,7 +481,7 @@ export default function PackingList() {
                       </button>
                     </div>
                     {!isCollapsed && (
-                      <div id={`items-${cat.id}`}>
+                      <div id={`items-${cat.id}`} className="packing-category-content">
                         {cat.notice && (
                           <p className="packing-notice">
                             <strong>Check Airbnb first</strong>
@@ -446,6 +499,7 @@ export default function PackingList() {
                                 role="checkbox"
                                 aria-checked={item.packed}
                                 aria-label={`${item.packed ? "Unpack" : "Pack"} ${item.name}`}
+                                aria-busy={pending.has(item.id)}
                                 disabled={pending.has(item.id) || !list.online}
                                 onClick={() =>
                                   void list.update(item, {
@@ -453,12 +507,8 @@ export default function PackingList() {
                                   })
                                 }
                               >
-                                <span>
-                                  {pending.has(item.id) ? (
-                                    <LoaderCircle className="spin" size={16} />
-                                  ) : item.packed ? (
-                                    <Check size={18} strokeWidth={3} />
-                                  ) : null}
+                                <span aria-hidden="true">
+                                  <Check className="packing-checkmark" size={18} strokeWidth={3} />
                                 </span>
                               </button>
                               <button
