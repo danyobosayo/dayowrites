@@ -12,5 +12,10 @@ export default function TripsLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <div className="trips-shell">{children}</div>;
+  return (
+    <div className="trips-shell">
+      <a className="trips-skip" href="#trip-content">Skip to trip content</a>
+      {children}
+    </div>
+  );
 }

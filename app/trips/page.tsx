@@ -3,7 +3,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function TripsPage() {
   return (
-    <main className="packing-page trips-index">
+    <main className="packing-page trips-index" id="trip-content" tabIndex={-1}>
       <Link className="trips-back" href="/">
         <ChevronLeft size={17} /> Daniel Kim
       </Link>
