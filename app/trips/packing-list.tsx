@@ -416,7 +416,7 @@ export default function PackingList() {
             ) : list.connected ? (
               "Live updates on"
             ) : (
-              "Reconnecting to live updates…"
+              "Connecting…"
             )}
           </div>
           {list.error && !editor && !confirmation && (
