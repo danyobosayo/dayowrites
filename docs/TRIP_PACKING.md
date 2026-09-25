@@ -34,8 +34,10 @@ previous item locally before refetching.
 
 ## Setup
 
-1. Apply `supabase/migrations/20260925202552_trip_packing.sql` to the website's
-   separate Supabase project. Do not use a Coax project.
+1. Apply the files in `supabase/migrations/` in order to the website's separate
+   Supabase project. Do not use a Coax project. The second migration restricts
+   public execution of the optional Supabase automatic-RLS helper; its event
+   trigger continues protecting newly created tables.
 2. Run `supabase/seed.sql` once. It uses `ON CONFLICT DO NOTHING`, so a repeat run
    preserves later edits and packed states. `npm run packing:seed` regenerates it
    from the source snapshot.

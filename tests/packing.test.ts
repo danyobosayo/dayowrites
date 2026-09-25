@@ -56,6 +56,33 @@ test("edits accept blank quantities and decimals but reject malformed or privile
   assert.throws(() => uuid("not-an-id"));
 });
 
+test("automatic RLS continues working after public helper access is revoked", async () => {
+  const db = new PGlite();
+  try {
+    await db.exec("create role anon; create role authenticated;");
+    const migration = readFileSync(new URL("../supabase/migrations/20260925205840_restrict_rls_helper.sql", import.meta.url), "utf8");
+    await db.exec(migration); // Projects without the optional helper are supported.
+    await db.exec(`
+      create function public.rls_auto_enable() returns event_trigger
+      language plpgsql security definer set search_path = pg_catalog as $$
+      declare cmd record;
+      begin
+        for cmd in select * from pg_event_trigger_ddl_commands()
+          where command_tag = 'CREATE TABLE' and schema_name = 'public' loop
+          execute format('alter table %s enable row level security', cmd.object_identity);
+        end loop;
+      end $$;
+      create event trigger rls_auto_enable on ddl_command_end execute function public.rls_auto_enable();
+    `);
+    await db.exec(migration);
+    await db.exec("create table public.example(id integer)");
+    const result = await db.query("select relrowsecurity from pg_class where oid='public.example'::regclass");
+    assert.deepEqual(result.rows, [{ relrowsecurity: true }]);
+    const access = await db.query("select has_function_privilege('anon','public.rls_auto_enable()','EXECUTE') as anon, has_function_privilege('authenticated','public.rls_auto_enable()','EXECUTE') as authenticated");
+    assert.deepEqual(access.rows, [{ anon: false, authenticated: false }]);
+  } finally { await db.close(); }
+});
+
 test("database permissions, seed preservation, concurrent edits, bulk atomicity, and reversible deletion", async (t) => {
   const db = new PGlite();
   await db.exec(
